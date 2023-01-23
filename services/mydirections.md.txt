@@ -12,7 +12,7 @@ Be creative and use multiple parameters from the API documentation to earn a top
 [https://YourDirectionsApiURLGoesHere]
 https://maps.googleapis.com/maps/api/directions/json
   ?departure_time=1679831600
-  &destination=place_id:37.74867%2C-119.587225
+  &destination=place_id:ChIJH-i-h0XKcFMR0cs220CQ17Y
   &mode=transit
   &traffic_model=best_guess
   &units=metric

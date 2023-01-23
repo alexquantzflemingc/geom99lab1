@@ -9,7 +9,15 @@ Be creative and use multiple parameters from the API documentation to earn a top
 ## Directions URL
 
 ```
-https://YourDirectionsApiURLGoesHere
+[https://YourDirectionsApiURLGoesHere]
+https://maps.googleapis.com/maps/api/directions/json
+  ?departure_time=1343641500
+  &destination=ChIJxeyK9Z3wloAR_gOA7SycJC0
+  &mode=transit
+  &origin=ChIJ_UoMkUXKcFMRY5Ss2r6ur8o
+  &waypoints=optimize%3Atrue%7Cvia:San Francisco|via:Mountain View|...
+  &key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
+  https://developers.google.com/maps/documentation/directions/get-directions
 ```
 
 ## Next paste the full JSON response to this query here:

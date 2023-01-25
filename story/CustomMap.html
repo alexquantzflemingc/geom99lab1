@@ -3,8 +3,9 @@
 <html>
   <head>
     <title>Simple Map</title>
-    <script src="https://github.com/alexquantzflemingc/geom99lab1/edit/main/story/CustomMap.json"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+    <script src="https://alexquantzflemingc.github.io/geom99lab1/story/CustomMap.js"></script>
     <!-- Embedded stylesheet -->
     <style>
         h1 {
@@ -67,15 +68,8 @@ body {
     
     <div id="map"></div>
 
-    <!-- 
-      The `defer` attribute causes the callback to execute after the full HTML
-      document has been parsed. For non-blocking uses, avoiding race conditions,
-      and consistent behavior across browsers, consider loading using Promises
-      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-      -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap"
+      defer>
   </body>
 </html>

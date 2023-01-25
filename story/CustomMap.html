@@ -2,10 +2,13 @@
 <!-- Inspiration taken from https://googlemaps.github.io/js-samples/ -->
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Wildlife Observations at Ken Reid</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-    <script src="https://alexquantzflemingc.github.io/geom99lab1/story/CustomMap.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap"
+      defer>
+    <script src="CustomMap.js"></script>
+   
     <!-- Embedded stylesheet -->
     <style>
         h1 {
@@ -24,20 +27,14 @@
         body {
             background-color: black;
         }
- /* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
+
 #map {
   height: 80%;
 }
 
-/* 
- * Optional: Makes the sample page fill the window. 
- */
 html,
 body {
-  height: 100%;
+  height: 80%;
   margin: 0;
   padding: 0;
 }
@@ -47,7 +44,7 @@ body {
   background: #fff;
   padding: 10px;
   margin: 10px;
-  border: 3px solid #000;
+  border: 1.5px solid #000;
 }
 
 #legend h3 {
@@ -58,7 +55,6 @@ body {
   vertical-align: middle;
 }
     </style>
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
   
@@ -67,9 +63,7 @@ body {
     <p>These are observations taken from Sunday January 15, 2023 from the loop path taken at Ken Reid on a beautiful sunny day.</p>
     
     <div id="map"></div>
+    <div id="legend"></div>
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap"
-      defer>
   </body>
 </html>

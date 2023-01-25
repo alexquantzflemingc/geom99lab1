@@ -1,5 +1,6 @@
 /*
 This code is referenced from https://googlemaps.github.io/js-samples/
+The first section provides wildlife observations using icon images described in a legend. The second code identifies a polygon of the visited region of Ken Reid.
 */
 let map: google.maps.Map;
 
@@ -10,7 +11,7 @@ function initMap(): void {
     mapTypeId: "satellite",
   });
 
-// Using Map pics folder and images to define icons in the legend and map:
+// Using Map pics folder and images to define icons in the legend and map.
   const iconBase = "https://alexquantzflemingc.github.io/geom99lab1/story/MapPics/";
   const icons: Record<string, any> = {
     birds: {
@@ -78,6 +79,26 @@ function initMap(): void {
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 }
 
+// Defining points of polygon showing area of Ken Reid visited.
+  const kenReid = [
+    { lat: 44.416688, lng: -78.759696 },
+    { lat: 44.417516, lng: -78.760554 },
+    { lat: 44.410190, lng: -78.770597 },
+    { lat: 44.408258, lng: -78.763129 },
+  ];
+
+  // Defining polygon features.
+  const kenReid = new google.maps.Polygon({
+    paths: kenReid,
+    strokeColor: "#DCDCDC",
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+    fillColor: "#DCDCDC",
+    fillOpacity: 0.1,
+  });
+
+  kenReid.setMap(map);
+}
 declare global {
   interface Window {
     initMap: () => void;

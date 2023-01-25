@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <!--Adapted from https://googlemaps.github.io/js-samples/, https://googlemaps.github.io/js-samples/playground.html?sample=map-simple-->
   <head>
-    <title>Earthquake Heatmap</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!-- playground-hide -->
-    <script>
-      const process = { env: {} };
-      process.env.GOOGLE_MAPS_API_KEY =
-        "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
-    </script>
-    <!-- playground-hide-end -->
+    <title>Simple Map</title>
+    <script src="https://github.com/alexquantzflemingc/geom99lab1/edit/main/story/CustomMap.json"></script>
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- Embedded stylesheet -->
+    <style>
+        h1 {
+            font-variant: bold;
+            font-size: 18;
+            color: white;
+            text-align: center;
+        }
+  
+        p {
+            font-variant: italic;
+            font-size: 16;
+            color: white;
+            text-align: center;
+        }
+        
+        body {
+            background-color: black;
+        }
+ /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#legend {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #000;
+}
+
+#legend h3 {
+  margin-top: 0;
+}
+
+#legend img {
+  vertical-align: middle;
+}
+    </style>
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+     
     <div id="map"></div>
 
     <!-- 
@@ -25,7 +70,7 @@
       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
       -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=visualization&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
     ></script>
   </body>

@@ -1,3 +1,6 @@
+/*
+This code is referenced from https://googlemaps.github.io/js-samples/
+*/
 let map: google.maps.Map;
 
 function initMap(): void {
@@ -7,6 +10,7 @@ function initMap(): void {
     mapTypeId: "satellite",
   });
 
+// Using Map pics folder and images to define icons in the legend and map:
   const iconBase = "https://alexquantzflemingc.github.io/geom99lab1/story/MapPics/";
   const icons: Record<string, any> = {
     birds: {
@@ -23,6 +27,7 @@ function initMap(): void {
     },
   };
 
+// Assigning icons to points on map to represent observations:
   const features = [
     {
       position: new google.maps.LatLng(44.410488, -78.763666),
